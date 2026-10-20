@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4f5ef" />
+  <meta name="description" content="Фотографии и описание восьми пород собак в Telegram Mini App" />
+  <title>Мир пород собак — каталог</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main class="layout">
+    <header class="hero">
+      <div class="hero__icon" aria-hidden="true">🐾</div>
+      <div>
+        <p class="eyebrow">Telegram Mini App · Лабораторная работа №6</p>
+        <h1>Мир пород собак</h1>
+        <p class="intro">Восемь пород, фотографии и понятное описание. Выбери собаку — и отправь её карточку прямо в чат.</p>
+      </div>
+    </header>
+
+    <section class="catalog" aria-labelledby="catalog-title">
+      <div class="sectionhead">
+        <h2 id="catalog-title">Каталог пород</h2>
+        <span id="breed-count" class="count">Загрузка…</span>
+      </div>
+      <p id="load-error" class="notice" role="alert" hidden></p>
+      <div id="breed-list" class="breed-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="selection" aria-live="polite">
+      <div>
+        <span class="eyebrow">Выбранная порода</span>
+        <h2 id="selected-name">Пока ничего не выбрано</h2>
+        <p id="selected-description">Нажми «Выбрать» на любой карточке выше.</p>
+      </div>
+      <button id="send-button" type="button" disabled>Отправить в чат</button>
+    </section>
+
+    <p id="app-status" class="hint" role="status">Чтобы получить карточку в Telegram, открой этот каталог через кнопку «🌐 Каталог с фотографиями» в чате с ботом.</p>
+    <footer class="footer">Учебный проект · Вариант №9 «Породы собак»</footer>
+  </main>
+</body>
+</html>
